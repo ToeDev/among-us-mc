@@ -358,7 +358,7 @@ public class StatsManager {
 	}
 
 	public void plusOneStatInt(StatInt key) {
-		this.statsInt.put(key, this.statsInt.get(key) + 1);
+		this.statsInt.put(key, this.statsInt.get(key) == null ? 0 : this.statsInt.get(key) + 1); //todo toe change
 	}
 
 	public void setStatInt(StatInt key, Integer value) {
